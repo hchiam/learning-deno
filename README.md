@@ -38,6 +38,22 @@ for await (const req of s) {
 
 The last example uses <https://deno.land/std@0.50.0/http/server.ts>
 
+## File reading example
+
+```js
+const { stdout, open, copy, args } = Deno;
+
+for (let i = 0; i < args.length; i++) {
+  const filename = args[i]; // args = CLI arguments
+  const file = await open(filename);
+  console.log();
+  await copy(file, stdout); // zero-copy async copy: file -> stdout
+  console.log();
+}
+```
+
+`deno run --allow-read cat.ts myfile.txt`
+
 ## Set up hot reload
 
 <https://deno.land/x/denon>
