@@ -64,8 +64,24 @@ Once:
 deno install --allow-read --allow-run --allow-write --allow-net -f --unstable https://deno.land/x/denon@v2.2.0/denon.ts
 ```
 
-Then:
+Then to get <http://localhost:8000> running:
 
 ```bash
 denon run --allow-net demo.ts
+```
+
+You can edit demo.ts and then refresh <http://localhost:8000> to see it updated - without having to restart in the CLI!
+
+If you see `bash: denon: command not found` in the CLI, you might need this [set up in your .bash_profile](https://github.com/denoland/deno/issues/6239#issuecomment-650396476):
+
+```bash
+# replace <your account> with your computer's account name:
+export PATH="/Users/<your account>/.deno/bin:$PATH"
+```
+
+or
+
+```bash
+# replace <your account> with your computer's account name:
+export PATH=$PATH:/Users/<your account>/.deno/bin:$PATH
 ```
