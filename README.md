@@ -14,6 +14,8 @@ Basically more secure by default, requiring you to explicitly specify what you w
 
 <https://deno.land>
 
+Then get updates with `deno upgrade`.
+
 ## More
 
 <https://deno.land/manual>
