@@ -37,3 +37,19 @@ for await (const req of s) {
 (You can try this ^ with `deno run demo.ts` and then `deno run --allow-net demo.ts`)
 
 The last example uses <https://deno.land/std@0.50.0/http/server.ts>
+
+## Set up hot reload
+
+<https://deno.land/x/denon>
+
+Once:
+
+```bash
+deno install --allow-read --allow-run --allow-write --allow-net -f --unstable https://deno.land/x/denon@v2.2.0/denon.ts
+```
+
+Then:
+
+```bash
+denon run --allow-net demo.ts
+```
